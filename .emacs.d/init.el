@@ -18,7 +18,7 @@
 (require 'compile)
 (ido-mode t)
 (menu-bar-mode -1)
-(normal-erase-is-backspace-mode 1)
+;(normal-erase-is-backspace-mode 1)
 (put 'downcase-region 'disabled nil)
 (put 'upcase-region 'disabled nil)
 (setq column-number-mode t)
@@ -75,3 +75,13 @@
 (require 'jade-mode)    
 (add-to-list 'auto-mode-alist '("\\.styl$" . sws-mode))
 (add-to-list 'auto-mode-alist '("\\.jade$" . jade-mode))
+
+
+;; python setup
+(add-to-list 'load-path "~/.emacs.d/emacs-for-python/")
+(require 'epy-setup)
+(require 'epy-python)
+(require 'epy-completion)
+(require 'epy-editing)
+;(require 'epy-bindings)
+(require 'epy-nose)

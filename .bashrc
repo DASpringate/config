@@ -169,10 +169,11 @@ PS1="\[\033[0;34m\][\u@\h:\w]$\[\033[0m\]"
 ## -----------------------
 
 # 2.1) Safety
-alias rm="rm -i"
-alias mv="mv -i"
-alias cp="cp -i"
-set -o noclobber
+# alias rm="rm -i"
+# alias mv="mv -i"
+# alias cp="cp -i"
+# set -o noclobber
+alias t="tree"
 
 # 2.2) Listing, directories, and motion
 alias ll="ls -alrtF --color"
