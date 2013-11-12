@@ -1,7 +1,6 @@
 config.git
 ============
-Clone and run this on a new EC2 instance running Ubuntu 12.04.2 LTS to
-configure your `bash` and `emacs` development environment as follows:
+Configure your `bash` and `emacs` development environment as follows:
 
 ```sh
 cd $HOME
@@ -12,6 +11,8 @@ ln -sb config/.bashrc .
 ln -sb config/.bashrc_custom .
 mv .emacs.d .emacs.d~
 ln -s config/.emacs.d .
+cd .emacs.d
+git clone https://github.com/gabrielelanaro/emacs-for-python.git
 ```
 
 See the
