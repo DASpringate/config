@@ -4,7 +4,16 @@
 ;; ---------------------
 ;; -- Global Settings --
 ;; ---------------------
+
+
 (add-to-list 'load-path "~/.emacs.d")
+
+(require 'package)
+(add-to-list 'package-archives
+	     '("marmalade" . "http://marmalade-repo.org/packages/"))
+(package-initialize)
+
+
 (require 'cl)
 (require 'ido)
 (require 'ffap)
@@ -75,7 +84,7 @@
 (require 'jade-mode)    
 (add-to-list 'auto-mode-alist '("\\.styl$" . sws-mode))
 (add-to-list 'auto-mode-alist '("\\.jade$" . jade-mode))
-
+(setq auto-mode-alist (cons '("\\.json\\'" . js-mode) auto-mode-alist))
 
 ;; python setup
 (add-to-list 'load-path "~/.emacs.d/emacs-for-python/")
@@ -85,3 +94,62 @@
 (require 'epy-editing)
 ;(require 'epy-bindings)
 (require 'epy-nose)
+
+(add-to-list 'load-path "~/.emacs.d/markdown-mode")
+(autoload 'markdown-mode "markdown-mode"
+  "Major mode for editing markdown files" t)
+(add-to-list 'auto-mode-alist '("\\.text\\'" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
+
+(dolist (hook '(markdown-mode-hook))
+  (add-hook hook 
+	    (lambda ()
+	      (when buffer-file-name
+		(add-hook 'after-save-hook
+			  'check-parens
+			  nil t))))
+  (add-hook hook (lambda () (flyspell-mode 1))))
+
+;; easy spell check
+(global-set-key (kbd "<f8>") 'ispell-word)
+(global-set-key (kbd "C-S-<f8>") 'flyspell-mode)
+(global-set-key (kbd "C-M-<f8>") 'flyspell-buffer)
+(global-set-key (kbd "C-<f8>") 'flyspell-check-previous-highlighted-word)
+(defun flyspell-check-next-highlighted-word ()
+  "Custom function to spell check next highlighted word"
+  (interactive)
+  (flyspell-goto-next-error)
+  (ispell-word))
+(global-set-key (kbd "M-<f8>") 'flyspell-check-next-highlighted-word)
+
+(blink-cursor-mode)
+
+(show-paren-mode 1)
+
+(load-theme 'tsdh-dark t)
+;; lisp stuff
+
+ (load (expand-file-name "~/quicklisp/slime-helper.el"))
+  ;; Replace "sbcl" with the path to your implementation
+  (setq inferior-lisp-program "/usr/bin/sbcl")
+
+
+
+(autoload 'enable-paredit-mode "paredit" "Turn on pseudo-structural editing of Lisp code." t)
+(add-hook 'emacs-lisp-mode-hook       #'enable-paredit-mode)
+(add-hook 'eval-expression-minibuffer-setup-hook #'enable-paredit-mode)
+(add-hook 'ielm-mode-hook             #'enable-paredit-mode)
+(add-hook 'lisp-mode-hook             #'enable-paredit-mode)
+(add-hook 'lisp-interaction-mode-hook #'enable-paredit-mode)
+(add-hook 'scheme-mode-hook           #'enable-paredit-mode)
+
+
+
+
+
+
+
+
+
+
