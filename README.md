@@ -26,9 +26,16 @@ curl -O http://beta.quicklisp.org/quicklisp.lisp
 
 Then, go into sbcl and do:
 
-```
+```LISP
 (load "quicklisp.lisp")
 (quicklisp-quickstart:install)
 (ql:add-to-init-file)
 (ql:quickload "quicklisp-slime-helper")
+```
+To get the CLHS locally:
+
+```LISP
+(ql:quickload "clhs")
+(clhs:print-emacs-setup-form)
+;; follow the instructions...
 ```

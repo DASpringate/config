@@ -122,7 +122,7 @@
 (global-set-key (kbd "C-M-<f8>") 'flyspell-buffer)
 (global-set-key (kbd "C-<f8>") 'flyspell-check-previous-highlighted-word)
 (add-hook 'text-mode-hook 'flyspell-mode)
-
+(add-hook 'text-mode-hook 'turn-on-visual-line-mode)
 (defun flyspell-check-next-highlighted-word ()
   "Custom function to spell check next highlighted word"
   (interactive)
@@ -147,6 +147,9 @@
 (add-hook 'lisp-mode-hook             #'enable-paredit-mode)
 (add-hook 'lisp-interaction-mode-hook #'enable-paredit-mode)
 (add-hook 'scheme-mode-hook           #'enable-paredit-mode)
+; clhs loading
+; see www.hexstreamsoft.com/articles/getting-started-with-the-clhs
+(load "/home/david/quicklisp/clhs-use-local.el" t)
 
 
 ;; org mode 
