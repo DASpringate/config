@@ -96,14 +96,16 @@ if [ "$PS1" ]; then
 		if [ -e /etc/sysconfig/bash-prompt-xterm ]; then
 			PROMPT_COMMAND=/etc/sysconfig/bash-prompt-xterm
 		else
-	    	PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/~}\007"'
+	    	#PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/~}\007"'
+		PROMPT_COMMAND='echo -ne "\033]0;${USER}:${PWD/#$HOME/~}\007"'
 		fi
 		;;
 	screen)
 		if [ -e /etc/sysconfig/bash-prompt-screen ]; then
 			PROMPT_COMMAND=/etc/sysconfig/bash-prompt-screen
 		else
-		PROMPT_COMMAND='echo -ne "\033_${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/~}\033\\"'
+		#PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/~}\007"'
+		PROMPT_COMMAND='echo -ne "\033_${USER}@:${PWD/#$HOME/~}\033\\"'
 		fi
 		;;
 	*)
@@ -162,7 +164,8 @@ shopt -s histappend
 
 # Make prompt informative
 # See:  http://www.ukuug.org/events/linux2003/papers/bash_tips/
-PS1="\[\033[0;34m\][\u@\h:\w]$\[\033[0m\]"
+#PS1="\[\033[0;34m\][\u@\h:\w]$\[\033[0m\]"
+PS1="\[\033[0;34m\][\u:\w]$\[\033[0m\]"
 
 ## -----------------------
 ## -- 2) Set up aliases --
@@ -205,20 +208,6 @@ export GREP_COLOR='1;31' # green for matches
 unset LANG
 export LC_ALL=POSIX
 
-# 2.6) Install rlwrap if not present
-# http://stackoverflow.com/a/677212
-command -v rlwrap >/dev/null 2>&1 || { echo >&2 "Install rlwrap to use node: sudo apt-get install -y rlwrap";}
-
-# 2.7) node.js and nvm
-# http://nodejs.org/api/repl.html#repl_repl
-alias node="env NODE_NO_READLINE=1 rlwrap node"
-alias node_repl="node -e \"require('repl').start({ignoreUndefined: true})\""
-export NODE_DISABLE_COLORS=1
-if [ -s ~/.nvm/nvm.sh ]; then
-    NVM_DIR=~/.nvm
-    source ~/.nvm/nvm.sh
-    nvm use v0.10.12 &> /dev/null # silence nvm use; needed for rsync
-fi
 
 ## ------------------------------
 ## -- 3) User-customized code  --

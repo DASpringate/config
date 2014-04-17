@@ -15,6 +15,20 @@ cd .emacs.d
 git clone https://github.com/gabrielelanaro/emacs-for-python.git
 ```
 
-See the
-[Startup Engineering Video Lectures 4a/4b](https://class.coursera.org/startup-001/lecture/index)
-for more details.
+For Common Lisp setup:
+
+```
+sudo apt-get sbcl
+mkdir lisp
+cd lisp
+curl -O http://beta.quicklisp.org/quicklisp.lisp
+```
+
+Then, go into sbcl and do:
+
+```
+(load "quicklisp.lisp")
+(quicklisp-quickstart:install)
+(ql:add-to-init-file)
+(ql:quickload "quicklisp-slime-helper")
+```
