@@ -32,7 +32,6 @@
 ;(menu-bar-mode 0)
 (tool-bar-mode 0)
 (scroll-bar-mode 0)
-;(normal-erase-is-backspace-mode 1)
 (put 'downcase-region 'disabled nil)
 (put 'upcase-region 'disabled nil)
 (setq column-number-mode t)
@@ -122,6 +121,7 @@
 (global-set-key (kbd "C-S-<f8>") 'flyspell-mode)
 (global-set-key (kbd "C-M-<f8>") 'flyspell-buffer)
 (global-set-key (kbd "C-<f8>") 'flyspell-check-previous-highlighted-word)
+(add-hook 'text-mode-hook 'flyspell-mode)
 
 (defun flyspell-check-next-highlighted-word ()
   "Custom function to spell check next highlighted word"
@@ -149,7 +149,7 @@
 (add-hook 'scheme-mode-hook           #'enable-paredit-mode)
 
 
-;; org mode
+;; org mode 
 
 (global-set-key "\C-cl" 'org-store-link)
 (global-set-key "\C-cc" 'org-capture)
