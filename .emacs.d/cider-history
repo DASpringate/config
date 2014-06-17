@@ -1,0 +1,41 @@
+;; -*- coding: utf-8-unix -*-
+;; Automatically written history of CIDER REPL session
+;; Edit at your own risk
+
+("(dosync *A*)" "(keys *A*)" "*A*" "(def ^:dynamic *A* (-main))" "(def *A* (-main))" "(-main)" "(ns user)" "(group-by odd? [1 2 3 4 5])" "(doc juxt)" "(ns user)" "(doc 'juxt)" "(docs juxt)" "(doc juxt)" "(class \"warfare\")" "(javadoc \"warfare\")" "(use 'clojure.java.javadoc)" "javadoc" "(javadoc \"warfare\")" "(.prize (Razzie. \"scum\"))" "Nobel." ".Nobel" "Nobel" "(rest (rest [1 2 3]))" "(rest [1 2 3])" "(clojure.string/join \" aka \" [\"dave\" \"hero\"])" "(clojure.string/join \" aka \" \"hello\")" "(into [1 2 3] [4 5 6])" "(reduce conj [1 2 3] [4 5 6])" "(reduce (conj [1 2 3] [4 5 6]))" "(vec [1 2 3] [4 5 6])" "(vector [1 2 3] [4 5 6])" "(conj [1 2 3] [4 5 6])" "(clojure.string/join \"\")" "(str [\"hello\" \"fuckers\"])" "(str :a :b)" "(* 4 (* 3 (* 2 1)))" "(= 3 (or 1 2))" "(= 1 (or 1 2))" "(recursive-reverse '(1 2 3))" "(recursive-reverse [1 2 3])" "(cons 1 [2 3])" "(conj [2 3] 1)" "(conj 1 [2 3])" "(peek [1 2 3])" "(pop [1 2 3])" "(last [1 2 3])" "(#( %) 12)" "(#(-> %) 12)" "(#(str %) \"hello\")" "(#(-> %) \"hello\")" "(#(%) \"hello\")" "((fn [s] s) \"hello\")" "(is-even-bigint? 10101011)" "(is-even-bigint? 10101010)" "(is-even-bigint? 101010100)" "(is-even-bigint? 1010101000)" "(is-even-bigint? 1010101)" "(is-even-bigint? 101)" "(is-even-bigint? 100)" "(is-even-bigint? 3)" "(is-even-bigint? 2)" "(is-even-bigint? 1)" "(is-even-bigint? 101)" "(is-even-bigint? 10)" "(not (not (not true)))" "(not (not true))" "(not true)" "(is-even? 8)" "(is-even? 7)" "(is-even? 6)" "(is-even? 5)" "(not true)" "(mod 10 2)" "(is-even? 5)" "(is-even? 3)" "(is-even? 10)" "(ns user)" "(is-even? 2)" "  ((partial concat [:a :b]) [:c :d])" "  ((partial concat [:a :b]))" "  ((partial concat [:a :b]) :c)" "(concat :a)" "(partial concat [:a :b])" "(concat [:a :b])" "(nil? 3)" "(nill ())" "(symbol? \"a\")" "(symbol? 'a)" "(symbol? :a)" "(doc complement)" "(complement)" "(#(%1) [1])" "(#(%) [1])" "(#(%) 10)" "(#((first %)) 10)" "(#((first x)) 10)" "(#(first %) 10)" "((fn [x] x) 10)" "(#(%)1)" "#(%)" "#(x)%1" "(< (count \"hello\") (count \"PL\"))" "(< (length \"hello\") (length \"PL\"))" "(< \"hello\" \"pl\")" "(/ 10 100 1000)" "(reduce / 10 [100 1000])" "(reduce / [100 1000])" "(reduce  [100 1000])" "(reduce + 1 ())" "(reduce + 1)" "(reduce (fn [a b] (* a b)) 100 [1 2 3 4])" "(#(% 5)
+          (fn [n] (* n n)))" "((fn [n] (* n n)) 5)" "(apply 5
+          (fn [n] (* n n)))" "(doc apply)" "(apply
+          (fn [n] (* n n)) 5)" "(5
+          (fn [n] (* n n)))" "(apply
+          (fn [n] (* n n)))" "(__
+          (fn [n] (* n n)))" "((fn [f] (f 4 5))
+           *)" "(((fn [x y] (+ x y))) 4 5)" "(= 17 (#(* 15 %2) 1 2))" "nil" "(doc 'nil)" "(doc nil)" "(= nil ())" "(= \"No dice!\" (try
+          (pop '())
+          (catch IllegalStateException e
+            \"No dice!\")))
+" "(doc cons)" "(doc conj)" "(cons 4 '(1 2 3))" "(conj '(1 2 3) 4)" "(doc pop)" "(pop '(1 2 3 4))" "(peek [1 2 3 4])" "(doc peek)" "(first '(1 2 3 4))" "(peek '(1 2 3 4))" "(doc not=)" "(not= 1 2)" "(let [{name :name {:keys [pages isbn-10]} :details} book]
+	(println \"name: \" name \"pages: \" pages \"isbn-10: \" isbn-10)) " "(def book {:name \"SICP\" :details {:pages 657 :isbn-10 \"0289475035\"}})" "(def book {:name \"SICP\" :details {:pages 657 isbn-10 \"0289475035\"}})" "(let [{:keys [x y]} point]
+	(println \"x: \" x \"y: \" y))" "(let [{:keys [x y]} point]
+	(println \"x: \" the-x \"y: \" the-y))" "(let [{the-x :x the-y :y} point]
+	(println \"x: \" the-x \"y: \" the-y))" "(def point {:x 5 :y 7})" "(let [[x & more :as full-list] indexes]
+	(println \"x: \" x \"more: \" more \"full-list:\" full-list ))" "(let [[x & more] indexes]
+	(println \"x: \" x \"more: \" more))" "(def indexes [1 2 3])" "(rest '(1 2 3))" "(first '(1 2 3))" "(car '(1 2 3))" "(let [[x y] point]
+	(println \"x: \" x \"y: \" y))" "(def point [5 7])" "@used-id" "(dothreads use-id :threads 10 :times 10)" "(defn use-id []
+	(dosync
+	 (alter uid inc)
+	 (alter used-id conj @uid)))" "(def used-id (ref []))" "(def uid (ref 0))" "@used-id" "(dothreads use-id :threads 10 :times 10)" "(dothreads use-id :threads 10 : times 10)" "(defn use-id []
+	(dosync
+	 (commute uid inc)
+	 (commute used-id conj @uid)))" "(defn use-id []
+	(dosync
+	 (commute uid inc)
+	 (commute used-if conj @uid)))" "(def used-id (ref []))" "(def uid (ref 0))" "(doc commute)" "@cancelled-orders" "@active-orders" "(cancel-order 2)" "(doc disj)" "(defn cancel-order [id]
+        (dosync
+(commute active-orders disj id)
+(commute cancelled-orders conj id)))" "(def cancelled-orders (ref #{1}))" "(def active-orders (ref #{2 3 4}))" "@ticks" "(dothreads tick :threads 1000 :times 1000)" "@ticks" "(dothreads tick :threads 1000 :times 100)" "(defn tick [] (swap! ticks inc))" "(def ticks (atom 0))" "(defn dothreads [f & {thread-count :threads exec-count :times :or {thread-count 1 exec-count 1}}]
+	(dotimes [t thread-count]
+	  (.submit *pool* #(dotimes [_ exec-count] (f)))))" "(defn dothreads [f & {thread-count :threads exec-count :times :or thread-count 1 exec-count 1}]
+	(dotimes [t thread-count]
+	  (.submit *pool* #(dotimes [_ exec-count] (f)))))" "(def ^:dynamic *pool* (Executors/newFixedThreadPool
+	(+ 2  (.availableProcessors (Runtime/getRuntime)))))" "(def *pool* (Executors/newFixedThreadPool
+	(+ 2  (.availableProcessors (Runtime/getRuntime)))))" "(import '(java.util.concurrent Executors))" "(get-next)" "(defn get-next [] (swap! uniq-id inc))" "(def uniq-id (atom 0))" "@apple-price" "(update-apple-price 303.00)" "(update-apple-price 302.00)" "@apple-price" "(update-apple-price 301.00)" "@apple-price" "(update-apple-price 300.00)" "@apple-price" "(defn update-apple-price [new-price] (reset! apple-price new-price))" "(def apple-price (atom nil))" "reset!" "(ns user)" "(update-apple-price 300.00)" "@apple-price" "(defn update-apple-price [new-price] (reset! apple-price new-price))" "doc (reset!)" "(= [1] (vector 1) (vec '(1)))" "(vector 1)" "(vec '(1))" "(vec 1)" "(= [1] (vec 1))" "(= 1 1)" "(doc vec)" "(+ 1 1)" "(doc reset!)" "@num-moves" "(dothreads! (fn [] (println \"Hello\")) :threads 2 :times 4)" "(dothreads! #(println \"Hello\" %) :threads 2 :times 4)" "@num-moves" "@to-move" "(board-map #(dosync (deref %)) board)" "(go make-move 100 100)" "@num-moves" "(board-map deref board)" "(make-move)" "(reset!)" "(make-move)" "@num-moves" "@to-move" "(board-map #(dosync (deref %)) board)" "(make-move)" "@num-moves" "(go make-move 100 100)" "@num-moves" "@to-move" "(board-map #(dosync (deref %)) board)" "(go make-move 100 100)" "@num-moves" "(board-map deref board)" "@board" "board" "(make-move)" "(choose-move @to-move)" "(take 10 (repeatedly #(choose-move @to-move)))" "to-move" "@to-move" "(take 5 (repeatedly #(choose-move @to-move)))" "(reset!)" "(make-move)" "(doc alter)" "(.availableProcessors (Runtime/getRuntime))" "*pool*" ".availableProcessors" "(dosync (io! (println System/out \"Hello!\")))" "(io! (println System/out \"Hello!\"))" "(println System/out \"Hello!\")" "(:a {:a 1 :b 2} \"mange\")" "(:c {:a 1 :b 2} \"mange\")" "(:c {:a 1 :b 2})" "(:a {:a 1 :b 2})" "({:a 1 :b 2} :b)" "(:b {:a 1 :b 2})" "(get {:a 1 :b 2} :b)" "{\"string-key\" +}" "{:a 1 :b \"hello\" :c []}" "{}" "(/ 1 5.9)" "(/ 1 5)" "1/5.9" "1/5" "(squareit 130)" "(squareit 13)" "(if true)" "(map)" "(map inc [1 2 3 4])" "(train)" "(-main)" "(println \"hello arse\")" "(+ 1 2 3 4)" "(reduce + [5 6 100])" "(map inc [1 2 3 4])")
