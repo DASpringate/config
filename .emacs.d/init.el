@@ -13,6 +13,8 @@
 	     '("marmalade" . "http://marmalade-repo.org/packages/"))
 (package-initialize)
 
+(unless (package-installed-p 'cider)
+	(package-install 'cider))
 
 (require 'cl)
 (require 'ido)
@@ -29,7 +31,7 @@
 (setq visible-bell t)
 (blink-cursor-mode)
 (ido-mode t)
-;(menu-bar-mode 0)
+(menu-bar-mode 0)
 (tool-bar-mode 0)
 (scroll-bar-mode 0)
 (put 'downcase-region 'disabled nil)
@@ -37,7 +39,7 @@
 (setq column-number-mode t)
 (setq inhibit-startup-message t)
 (setq-default major-mode 'org-mode)
-(setq initial-scratch-message "scratch")
+(setq initial-scratch-message "***Scratch***\n\n")
 (setq save-abbrevs nil)
 (setq show-trailing-whitespace t)
 (setq suggest-key-bindings t)
@@ -49,19 +51,18 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(default ((t (:inherit autoface-default :strike-through nil :underline nil :slant normal :weight normal :height 120 :width normal :family "monaco"))))
- '(column-marker-1 ((t (:background "red"))))
- '(diff-added ((t (:foreground "cyan"))))
+ '(column-marker-1 ((t (:background "red"))) t)
+ '(diff-added ((t (:foreground "cyan"))) t)
  '(flymake-errline ((((class color) (background light)) (:background "Red"))))
  '(font-lock-comment-face ((((class color) (min-colors 8) (background light)) (:foreground "red"))))
- '(fundamental-mode-default ((t (:inherit default))))
+ '(fundamental-mode-default ((t (:inherit default))) t)
  '(highlight ((((class color) (min-colors 8)) (:background "white" :foreground "magenta"))))
  '(isearch ((((class color) (min-colors 8)) (:background "yellow" :foreground "black"))))
  '(linum ((t (:foreground "black" :weight bold))))
  '(region ((((class color) (min-colors 8)) (:background "white" :foreground "magenta"))))
  '(secondary-selection ((((class color) (min-colors 8)) (:background "gray" :foreground "cyan"))))
  '(show-paren-match ((((class color) (background light)) (:background "black"))))
- '(vertical-border ((t nil)))
-)
+ '(vertical-border ((t nil))))
 
 ;; ------------
 ;; -- Macros --
@@ -151,6 +152,11 @@
 ; see www.hexstreamsoft.com/articles/getting-started-with-the-clhs
 (load "/home/david/quicklisp/clhs-use-local.el" t)
 
+;;;; Clojure stuff
+
+(add-hook 'cider-mode-hook 'cider-turn-on-eldoc-mode)
+(setq nrepl-hide-special-buffers t)
+(setq cider-auto-select-error-buffer t)
 
 ;; org mode 
 
@@ -162,11 +168,9 @@
 (add-to-list 'auto-mode-alist '("\\.text\\'" . org-mode))
 
 
-
-
-
-
-
-
-
-
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(org-agenda-files (quote ("~/Dropbox/notes/work.org"))))
