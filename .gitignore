@@ -1,2 +1,3 @@
 .emacs.d/auto-save-list/*
 .bashrc_custom
+.emacs.d/ac-comphist.dat
