@@ -28,6 +28,8 @@
 (require 'dired-x)
 (require 'compile)
 
+
+
 (setq visible-bell t)
 (blink-cursor-mode)
 (ido-mode t)
@@ -136,11 +138,12 @@
 
 (load-theme 'tsdh-dark t)
 
+(setq backup-directory-alist '(("." . "~/.saves")))
 
 ;; lisp stuff
 
 (load (expand-file-name "~/quicklisp/slime-helper.el"))
-(setq inferior-lisp-program "/usr/bin/sbcl")
+(setq inferior-lisp-program "~/bin/sbcl")
 (autoload 'enable-paredit-mode "paredit" "Turn on pseudo-structural editing of Lisp code." t)
 (add-hook 'emacs-lisp-mode-hook       #'enable-paredit-mode)
 (add-hook 'eval-expression-minibuffer-setup-hook #'enable-paredit-mode)
@@ -158,6 +161,10 @@
 (setq nrepl-hide-special-buffers t)
 (setq cider-auto-select-error-buffer t)
 
+;; clojure stuff
+
+(load "~/.emacs.d/vendor/clojure")
+
 ;; org mode 
 
 (global-set-key "\C-cl" 'org-store-link)
@@ -173,4 +180,4 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(org-agenda-files (quote ("~/Dropbox/notes/work.org"))))
+ '(org-agenda-files (quote ("~/Dropbox/notes/together.org" "~/Dropbox/notes/work.org"))))
