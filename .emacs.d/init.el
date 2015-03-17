@@ -9,7 +9,9 @@
 (add-to-list 'load-path "~/.emacs.d")
 
 (require 'package)
+
 (add-to-list 'package-archives
+	     '("melpa" . "http://melpa.org/packages/")
 	     '("marmalade" . "http://marmalade-repo.org/packages/"))
 (package-initialize)
 
@@ -46,6 +48,14 @@
 (setq show-trailing-whitespace t)
 (setq suggest-key-bindings t)
 (setq vc-follow-symlinks t)
+(fset 'yes-or-no-p 'y-or-n-p)
+(setq confirm-nonexistent-file-or-buffer nil)
+
+(desktop-save-mode 1)
+
+(setq kill-buffer-query-functions
+      (remq 'process-kill-buffer-query-function
+	    kill-buffer-query-functions))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -74,15 +84,14 @@
 (global-set-key "\M-=" 'align-equals)
 (global-set-key "\C-x\C-m" 'execute-extended-command)
 (global-set-key "\C-c;" 'comment-or-uncomment-region)
-(global-set-key "\M-n" 'next5)
-(global-set-key "\M-p" 'prev5)
-(global-set-key "\M-o" 'other-window)
-(global-set-key "\M-i" 'back-window)
-(global-set-key "\C-z" 'zap-to-char)
-(global-set-key "\C-h" 'backward-delete-char)
-(global-set-key "\M-d" 'delete-word)
-(global-set-key "\M-h" 'backward-delete-word)
-(global-set-key "\M-u" 'zap-to-char)
+
+(global-set-key "\M--" " <- ") ; R assign
+(global-set-key "\M-m" " %>% ") ; R assign
+
+(setq ido-create-new-buffer 'always)
+
+(global-set-key [f1] 'ansi-term)
+
 
 ;; ----------------------------
 ;; -- JS Mode configuration --
@@ -103,6 +112,50 @@
 (require 'epy-editing)
 ;(require 'epy-bindings)
 (require 'epy-nose)
+
+
+;; ESS config
+;(ess-toggle-underscore nil)
+
+(setq ess-ask-for-ess-directory nil)
+(setq ess-local-process-name "R")
+(setq ansi-color-for-comint-mode 'filter)
+(setq comint-scroll-to-bottom-on-input t)
+(setq comint-scroll-to-bottom-on-output t)
+(setq comint-move-point-for-output t)
+(defun my-ess-start-R ()
+  (interactive)
+  (if (not (member "*R*" (mapcar (function buffer-name) (buffer-list))))
+      (progn
+        (delete-other-windows)
+        (setq w1 (selected-window))
+        (setq w1name (buffer-name))
+        (setq w2 (split-window w1 nil t))
+        (R)
+        (set-window-buffer w2 "*R*")
+        (set-window-buffer w1 w1name))))
+(defun my-ess-eval ()
+  (interactive)
+  (my-ess-start-R)
+  (if (and transient-mark-mode mark-active)
+      (call-interactively 'ess-eval-region)
+    (call-interactively 'ess-eval-line-and-step)))
+(add-hook 'ess-mode-hook
+          '(lambda ()
+             (local-set-key [C-j] 'my-ess-eval)))
+(add-hook 'inferior-ess-mode-hook
+          '(lambda ()
+             (local-set-key [C-up] 'comint-previous-input)
+             (local-set-key [C-down] 'comint-next-input)))
+(add-hook 'Rnw-mode-hook
+          '(lambda ()
+             (local-set-key [C-j] 'my-ess-eval)))
+(require 'ess-site)
+;; ESS Mode (.R file)
+  (define-key ess-mode-map "\C-l" 'ess-eval-line-and-step)
+  (define-key ess-mode-map "\C-p" 'ess-eval-function-or-paragraph-and-step)
+  (define-key ess-mode-map "\C-r" 'ess-eval-region)
+(setq ess-eval-visibly-p nil)
 
 (add-to-list 'load-path "~/.emacs.d/markdown-mode")
 (autoload 'markdown-mode "markdown-mode"
@@ -167,6 +220,10 @@
 
 ;; org mode 
 
+(require 'org)
+(setq org-startup-indented t)
+(setq org-indent-mode t)
+(setq org-completion-use-ido t)
 (global-set-key "\C-cl" 'org-store-link)
 (global-set-key "\C-cc" 'org-capture)
 (global-set-key "\C-ca" 'org-agenda)

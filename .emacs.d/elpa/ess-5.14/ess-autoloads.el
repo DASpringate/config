@@ -3,8 +3,8 @@
 ;;; Code:
 
 
-;;;### (autoloads (Rd-mode) "ess-rd" "ess-rd.el" (21609 59575 620102
-;;;;;;  24000))
+;;;### (autoloads (Rd-mode) "ess-rd" "ess-rd.el" (21703 17759 963876
+;;;;;;  848000))
 ;;; Generated autoloads from ess-rd.el
 
 (autoload 'Rd-mode "ess-rd" "\
@@ -42,8 +42,8 @@ following lines to your `.emacs' file:
 
 ;;;***
 
-;;;### (autoloads (mouse-me) "mouseme" "mouseme.el" (21609 59574
-;;;;;;  852102 59000))
+;;;### (autoloads (mouse-me) "mouseme" "mouseme.el" (21703 17759
+;;;;;;  885873 622000))
 ;;; Generated autoloads from mouseme.el
 
 (autoload 'mouse-me "mouseme" "\
@@ -67,8 +67,8 @@ Popup a menu of functions to run on selected string or region.
 ;;;;;;  "ess-sp6w-d.el" "ess-sta-d.el" "ess-sta-l.el" "ess-swv.el"
 ;;;;;;  "ess-toolbar.el" "ess-trns.el" "ess-utils.el" "ess-vst-d.el"
 ;;;;;;  "ess-xls-d.el" "ess.el" "essd-els.el" "make-regexp.el" "msdos.el"
-;;;;;;  "noweb-font-lock-mode.el" "noweb-mode.el") (21609 59576 115084
-;;;;;;  901000))
+;;;;;;  "noweb-font-lock-mode.el" "noweb-mode.el") (21703 17760 44343
+;;;;;;  984000))
 
 ;;;***
 

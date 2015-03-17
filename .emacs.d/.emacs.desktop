@@ -1,0 +1,40 @@
+;; -*- mode: emacs-lisp; coding: emacs-mule; -*-
+;; --------------------------------------------------------------------------
+;; Desktop File for Emacs
+;; --------------------------------------------------------------------------
+;; Created Fri Mar 13 14:10:41 2015
+;; Desktop file format version 206
+;; Emacs version 24.3.1
+
+;; Global section:
+(setq desktop-missing-file-warning nil)
+(setq tags-file-name nil)
+(setq tags-table-list nil)
+(setq search-ring nil)
+(setq regexp-search-ring nil)
+(setq register-alist nil)
+(setq file-name-history '("/home/mdehsds4/Dropbox/notes/work.org" "/home/mdehsds4/cprd/psoriasis/code/indirect_adjusted_prev.R" "/home/mdehsds4/cprd/psoriasis/code/prevalence_1998_2003.R" "/home/mdehsds4/cprd/psoriasis/code/prevalence_revised_per100000.R" "/home/mdehsds4/cprd/psoriasis/code/prevalence_revised.R" "/home/mdehsds4/cprd/psoriasis/code/prev_analysis.R" "/home/mdehsds4/cprd/psoriasis/code/incidence_revised.R" "/home/mdehsds4/cprd/psoriasis/code/prev_analysis.R" "/home/mdehsds4/cprd/psoriasis/code/prevalence.R" "/home/mdehsds4/cprd/psoriasis/code/incidence_graphs.R" "/home/mdehsds4/.emacs.d/elpa/ess-5.14/ess-rutils.el" "/home/mdehsds4/.emacs.d/init.el" "/home/mdehsds4/cprd/psoriasis/code/incidence_revised_1998_2003.R"))
+
+;; Buffer section -- buffers listed in same order as in buffer list:
+(desktop-create-buffer 206
+  "/home/mdehsds4/Dropbox/notes/work.org"
+  "work.org"
+  'org-mode
+  '(visual-line-mode org-indent-mode flyspell-mode)
+  12191
+  '(nil nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . utf-8-unix) (truncate-lines)))
+
+(desktop-create-buffer 206
+  "/home/mdehsds4/config/.emacs.d/init.el"
+  "init.el"
+  'emacs-lisp-mode
+  '(auto-complete-mode yas/minor-mode org-indent-mode paredit-mode)
+  5108
+  '(4203 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
