@@ -1,7 +1,7 @@
 ;; clojure
 
 (require 'ac-nrepl)
-
+(require 'clojure-mode)
 (add-to-list 'auto-mode-alist '("\\.edn$" . clojure-mode))
 
 ;; cider
@@ -22,3 +22,5 @@
 (add-to-list 'ac-modes 'cider-mode)
 (add-to-list 'ac-modes 'cider-repl-mode)
 
+(defun turn-on-paredit () (paredit-mode t))
+(add-hook 'clojure-mode-hook 'turn-on-paredit)
