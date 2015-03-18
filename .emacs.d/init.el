@@ -56,7 +56,6 @@
 (setq kill-buffer-query-functions
       (remq 'process-kill-buffer-query-function
 	    kill-buffer-query-functions))
-
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -105,14 +104,21 @@
 (setq auto-mode-alist (cons '("\\.json\\'" . js-mode) auto-mode-alist))
 
 ;; python setup
-(add-to-list 'load-path "~/.emacs.d/emacs-for-python/")
+
+(load-file "~/.emacs.d/emacs-for-python/epy-init.el")
 (require 'epy-setup)
 (require 'epy-python)
 (require 'epy-completion)
 (require 'epy-editing)
-;(require 'epy-bindings)
+(require 'epy-bindings)
 (require 'epy-nose)
 
+;(require 'yasnippet)
+
+(epy-setup-checker "pyflakes %f")
+(epy-setup-ipython)
+(global-hl-line-mode t)
+(global-set-key (kbd "C-c !") 'python-shell-switch-to-shell)
 
 ;; ESS config
 ;(ess-toggle-underscore nil)

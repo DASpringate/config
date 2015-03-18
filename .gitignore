@@ -1,2 +1,2 @@
 .emacs.d/auto-save-list/*
-./.bashrc_custom
+*.bashrc_custom
