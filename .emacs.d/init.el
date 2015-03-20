@@ -90,6 +90,8 @@
 (setq ido-create-new-buffer 'always)
 
 (global-set-key [f1] 'ansi-term)
+(global-set-key [f2] 'rgrep)
+
 (global-set-key (kbd "C-c r") 'replace-string)
 (global-set-key (kbd "M-o") 'other-window)
 
@@ -101,6 +103,11 @@
 (global-set-key [f6] 'revert-this-buffer)
 
 
+(defun proced-settings ()
+  (proced-toggle-auto-update))
+
+(add-hook 'proced-mode-hook 'proced-settings)
+(global-set-key (kbd "C-c p") 'proced)
 
 
 
