@@ -1,2 +1,4 @@
 .emacs.d/auto-save-list/*
 *.bashrc_custom
+.emacs.d/.emacs.desktop
+.emacs.d/.emacs.desktop.lock

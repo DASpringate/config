@@ -90,6 +90,18 @@
 (setq ido-create-new-buffer 'always)
 
 (global-set-key [f1] 'ansi-term)
+(global-set-key (kbd "C-c r") 'replace-string)
+(global-set-key (kbd "M-o") 'other-window)
+
+
+(defun revert-this-buffer ()
+  (interactive)
+  (revert-buffer nil t t)
+  (message (concat "Reverted buffer " (buffer-name))))
+(global-set-key [f6] 'revert-this-buffer)
+
+
+
 
 
 ;; ----------------------------
@@ -113,7 +125,9 @@
 (require 'epy-bindings)
 (require 'epy-nose)
 
-;(require 'yasnippet)
+(require 'yasnippet)
+
+
 
 (epy-setup-checker "pyflakes %f")
 (epy-setup-ipython)

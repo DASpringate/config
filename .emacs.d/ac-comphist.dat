@@ -1,124 +1,124 @@
-((("url" .
-   [0 0 2])
-  ("python" .
-   [0 0 0 1 0 0])
-  ("autoload" .
+((("epy-nose" .
    [0 0 0 0 1 0 0 0])
-  ("number" .
-   [1 0 0 0 0 0])
-  ("message" .
-   [1 0 0 0 0 0 0])
-  ("interactive" .
-   [1 0 0 0 0 0 0 0 0 0 0])
-  ("defun" .
-   [1 0 0 0 0])
-  ("point" .
-   [1 0 0 0 0])
-  ("current-buffer" .
-   [0 0 0 0 0 0 0 0 0 0 1 0 0 0])
-  ("process-kill-buffer-query-function" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("process-kill-without-query" .
-   [0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("processp" .
-   [0 0 0 0 0 0 0 1])
-  ("remq" .
-   [1 0 0 0])
-  ("kill-buffer-query-functions" .
-   [0 0 0 0 0 0 0 1 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("se" .
-   [1 0])
-  ("alt" .
-   [0 0 1])
-  ("ido-create-new-buffer" .
-   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0])
-  ("confirm-nonexistent-file-or-buffer" .
-   [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("cons" .
-   [0 0 0 1])
-  ("y-or-n-p" .
-   [0 0 1 0 0 0 0 0])
-  ("yes-or-no-p" .
-   [0 0 0 0 0 0 0 0 0 0 1])
-  ("fset" .
-   [1 0 0 0])
-  ("text" .
-   [1 0 0 0])
-  ("import" .
-   [2 0 0 0 0 0])
-  ("views" .
-   [1 0 0 0 0])
-  ("medcodes" .
-   [1 0 0 0 0 0 0 0])
-  ("from" .
-   [2 0 0 0])
-  ("faq" .
-   [3 0 0])
-  ("class" .
-   [5 0 0 0 1])
-  ("defm" .
-   [0 0 0 1])
-  ("Django" .
-   [0 0 0 0 1 0])
-  ("classes" .
-   [0 0 0 0 0 1 0])
-  ("models" .
-   [21 0 0 0 0 0])
-  ("Charfield" .
-   [3 0 1 0 0 0 0 0 0])
-  ("max_length" .
-   [5 0 0 3 2 1 0 0 0 0])
-  ("Model" .
-   [1 0 0 1 0])
-  ("True" .
-   [9 0 0 0])
-  ("blank" .
-   [7 0 0 0 0])
-  ("CharField" .
-   [2 0 3 1 1 1 0 0 0])
-  ("def" .
-   [3 0 0])
-  ("self" .
-   [5 0 0 0])
-  ("title" .
-   [1 0 0 0 0])
-  ("year" .
-   [1 0 0 0])
-  ("100" .
-   [1 0 0])
-  ("code" .
-   [4 0 0 0])
-  ("__unicode__" .
-   [1 0 0 0 0 0 0 0 0 0 0])
-  ("return" .
-   [1 0 0 0 0 0])
-  ("description" .
-   [1 0 0 0 0 0 0 0 0 0 0])
-  ("Article" .
-   [1 0 0 0 0 0 0])
-  ("setq" .
-   [5 0 0 0])
-  ("visible-bell" .
-   [0 0 0 0 0 0 0 1 0 0 0 0])
-  ("initialization" .
-   [0 0 0 0 0 1 0 0 0 0 0 0 0 0])
-  ("initial-scratch-message" .
-   [0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("scroll-bar-mode" .
-   [0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
-  ("tool-bar-mode" .
-   [0 0 0 0 0 0 0 0 1 0 0 0 0])
-  ("global-set-key" .
-   [0 0 0 0 0 0 1 0 0 0 0 0 0 0])
-  ("kbd" .
+  ("epy-setup" .
+   [0 0 0 0 0 0 1 0 0])
+  ("nil" .
+   [2 0 0])
+  ("org" .
    [2 0 0])
   ("auto-mode-alist" .
    [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0])
-  ("org" .
+  ("kbd" .
    [2 0 0])
-  ("nil" .
-   [2 0 0])
-  ("epy-setup" .
-   [0 0 0 0 0 0 1 0 0])
-  ("epy-nose" .
-   [0 0 0 0 1 0 0 0])))
+  ("global-set-key" .
+   [0 0 0 0 0 0 1 0 0 0 0 0 0 0])
+  ("tool-bar-mode" .
+   [0 0 0 0 0 0 0 0 1 0 0 0 0])
+  ("scroll-bar-mode" .
+   [0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
+  ("initial-scratch-message" .
+   [0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("initialization" .
+   [0 0 0 0 0 1 0 0 0 0 0 0 0 0])
+  ("visible-bell" .
+   [0 0 0 0 0 0 0 1 0 0 0 0])
+  ("setq" .
+   [5 0 0 0])
+  ("Article" .
+   [1 0 0 0 0 0 0])
+  ("description" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("return" .
+   [1 0 0 0 0 0])
+  ("__unicode__" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("code" .
+   [4 0 0 0])
+  ("100" .
+   [1 0 0])
+  ("year" .
+   [1 0 0 0])
+  ("title" .
+   [1 0 0 0 0])
+  ("self" .
+   [5 0 0 0])
+  ("def" .
+   [3 0 0])
+  ("CharField" .
+   [2 0 3 1 1 1 0 0 0])
+  ("blank" .
+   [7 0 0 0 0])
+  ("True" .
+   [9 0 0 0])
+  ("Model" .
+   [1 0 0 1 0])
+  ("max_length" .
+   [5 0 0 3 2 1 0 0 0 0])
+  ("Charfield" .
+   [3 0 1 0 0 0 0 0 0])
+  ("models" .
+   [21 0 0 0 0 0])
+  ("classes" .
+   [0 0 0 0 0 1 0])
+  ("Django" .
+   [0 0 0 0 1 0])
+  ("defm" .
+   [0 0 0 1])
+  ("class" .
+   [5 0 0 0 1])
+  ("faq" .
+   [3 0 0])
+  ("from" .
+   [2 0 0 0])
+  ("medcodes" .
+   [1 0 0 0 0 0 0 0])
+  ("views" .
+   [1 0 0 0 0])
+  ("import" .
+   [2 0 0 0 0 0])
+  ("text" .
+   [1 0 0 0])
+  ("fset" .
+   [1 0 0 0])
+  ("yes-or-no-p" .
+   [0 0 0 0 0 0 0 0 0 0 1])
+  ("y-or-n-p" .
+   [0 0 1 0 0 0 0 0])
+  ("cons" .
+   [0 0 0 1])
+  ("confirm-nonexistent-file-or-buffer" .
+   [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("ido-create-new-buffer" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0])
+  ("alt" .
+   [0 0 1])
+  ("se" .
+   [1 0])
+  ("kill-buffer-query-functions" .
+   [0 0 0 0 0 0 0 1 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("remq" .
+   [1 0 0 0])
+  ("processp" .
+   [0 0 0 0 0 0 0 1])
+  ("process-kill-without-query" .
+   [0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("process-kill-buffer-query-function" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("current-buffer" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0 0])
+  ("point" .
+   [1 0 0 0 0])
+  ("defun" .
+   [1 0 0 0 0])
+  ("interactive" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("message" .
+   [1 0 0 0 0 0 0])
+  ("number" .
+   [1 0 0 0 0 0])
+  ("autoload" .
+   [0 0 0 0 1 0 0 0])
+  ("python" .
+   [0 0 0 1 0 0])
+  ("url" .
+   [0 0 2])))
