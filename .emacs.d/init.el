@@ -80,20 +80,8 @@
 ;; ------------
 (load "defuns-config.el")
 (fset 'align-equals "\C-[xalign-regex\C-m=\C-m")
-(global-set-key "\M-=" 'align-equals)
-(global-set-key "\C-x\C-m" 'execute-extended-command)
-(global-set-key "\C-c;" 'comment-or-uncomment-region)
-
-(global-set-key "\M--" " <- ") ; R assign
-(global-set-key "\M-m" " %>% ") ; R assign
 
 (setq ido-create-new-buffer 'always)
-
-(global-set-key [f1] 'ansi-term)
-(global-set-key [f2] 'rgrep)
-
-(global-set-key (kbd "C-c r") 'replace-string)
-(global-set-key (kbd "M-o") 'other-window)
 
 
 (defun revert-this-buffer ()
@@ -102,12 +90,9 @@
   (message (concat "Reverted buffer " (buffer-name))))
 (global-set-key [f6] 'revert-this-buffer)
 
-
 (defun proced-settings ()
-  (proced-toggle-auto-update))
+  (proced-toggle-auto-update t))
 
-(add-hook 'proced-mode-hook 'proced-settings)
-(global-set-key (kbd "C-c p") 'proced)
 
 
 
@@ -124,6 +109,13 @@
 
 ;; python setup
 
+(add-to-list 'load-path
+             "~/.emacs.d/emacs-for-python/extensions/yasnippet")
+(require 'yasnippet)
+(setq yas-snippet-dirs
+      '("~/.emacs.d/emacs-for-python/extensions/yasnippet/snippets"))
+
+
 (load-file "~/.emacs.d/emacs-for-python/epy-init.el")
 (require 'epy-setup)
 (require 'epy-python)
@@ -132,7 +124,7 @@
 (require 'epy-bindings)
 (require 'epy-nose)
 
-(require 'yasnippet)
+
 
 
 
@@ -140,6 +132,8 @@
 (epy-setup-ipython)
 (global-hl-line-mode t)
 (global-set-key (kbd "C-c !") 'python-shell-switch-to-shell)
+
+
 
 ;; ESS config
 ;(ess-toggle-underscore nil)
@@ -242,7 +236,12 @@
 ;; Haskell stuff
 
 (custom-set-variables
-     '(haskell-mode-hook '(turn-on-haskell-indentation)))
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(haskell-mode-hook (quote (turn-on-haskell-indentation)))
+ '(org-agenda-files (quote ("~/webapps/grocircle/notes/gc_todo.org" "~/Dropbox/notes/work.org"))))
 
 
 ;; org mode 
@@ -257,11 +256,26 @@
 (global-set-key "\C-cb" 'org-iswitchb)
 (add-to-list 'auto-mode-alist '("\\.txt\\'" . org-mode))
 (add-to-list 'auto-mode-alist '("\\.text\\'" . org-mode))
+;; clocking
+
+(setq org-clock-persist 'history)
+(org-clock-persistence-insinuate)
 
 
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(org-agenda-files (quote ("~/Dropbox/notes/together.org" "~/Dropbox/notes/work.org"))))
+;; Keybindings
+
+(global-set-key [f1] 'ansi-term)
+(global-set-key [f2] 'rgrep)
+(global-set-key (kbd "C-c r") 'replace-string)
+(global-set-key (kbd "M-o") 'other-window)
+(add-hook 'proced-mode-hook 'proced-settings)
+(global-set-key (kbd "C-c p") 'proced)
+(global-set-key "\M-=" 'align-equals)
+(global-set-key "\C-x\C-m" 'execute-extended-command)
+(global-set-key "\C-c;" 'comment-or-uncomment-region)
+(global-set-key "\M--" " <- ") ; R assign
+(global-set-key "\M-m" " %>% ") ; R assign
+
+
+
+
