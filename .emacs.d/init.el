@@ -233,6 +233,10 @@
 
 (load "~/.emacs.d/vendor/clojure")
 
+;; Scala stuff
+
+(load "~/.emacs.d/vendor/scala")
+
 ;; Haskell stuff
 
 (custom-set-variables
