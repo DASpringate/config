@@ -1,2 +1,1 @@
-;; org-persist.el - david-ThinkPad-X240 at <2015-10-26 Mon 08:05>
-(setq stored-clock-history '(    ))
+;; org-persist.el - davidspringate-Latitude-E7440 at <2015-11-09 Mon 08:55>
