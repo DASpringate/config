@@ -50,7 +50,7 @@
 (setq vc-follow-symlinks t)
 (fset 'yes-or-no-p 'y-or-n-p)
 (setq confirm-nonexistent-file-or-buffer nil)
-
+(windmove-default-keybindings)
 (desktop-save-mode 1)
 
 (setq kill-buffer-query-functions

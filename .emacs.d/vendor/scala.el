@@ -20,7 +20,7 @@
   (package-refresh-contents) (package-install 'ensime))
 
 (require 'ensime)
-(add-hook 'scala-mode2-hook 'ensime-scala-mode-hook)
+(add-hook 'scala-mode-hook 'ensime-scala-mode-hook)
 (add-hook 'scala-mode-hook #'yas-minor-mode)
 ;; but company-mode / yasnippet conflict. Disable TAB in company-mode with
 (define-key company-active-map [tab] nil)
