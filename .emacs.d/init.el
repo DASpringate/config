@@ -210,7 +210,6 @@
 
 (show-paren-mode 1)
 
-(load-theme 'tsdh-dark t)
 
 (setq backup-directory-alist '(("." . "~/.saves")))
 
@@ -237,15 +236,26 @@
 
 (load "~/.emacs.d/vendor/scala")
 
-;; Haskell stuff
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(ansi-color-faces-vector
+   [default default default italic underline success warning error])
+ '(ansi-color-names-vector
+   ["black" "red3" "ForestGreen" "yellow3" "blue" "magenta3" "DeepSkyBlue" "gray50"])
+ '(custom-enabled-themes (quote (tsdh-dark)))
+ '(custom-safe-themes
+   (quote
+    ("afc220610bee26945b7c750b0cca03775a8b73c27fdca81a586a0a62d45bbce2" default)))
+
+
  '(haskell-mode-hook (quote (turn-on-haskell-indentation)))
- '(org-agenda-files (quote ("~/webapps/grocircle/notes/gc_todo.org" "~/Dropbox/notes/work.org"))))
+ '(org-agenda-files
+   (quote
+    ("~/webapps/grocircle/notes/gc_todo.org" "~/Dropbox/notes/work.org"))))
 
 
 ;; org mode 
