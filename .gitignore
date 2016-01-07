@@ -3,3 +3,6 @@
 .emacs.d/.emacs.desktop
 .emacs.d/.emacs.desktop.lock
 .emacs.d/session*
+.emacs.d/ac-comphist.dat
+.emacs.d/ido.last
+.emacs.d/cider-history
