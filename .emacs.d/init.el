@@ -7,6 +7,7 @@
 
 
 (add-to-list 'load-path "~/.emacs.d")
+(add-to-list 'load-path "~/.emacs.d/plugins")
 
 (require 'package)
 
@@ -93,6 +94,8 @@
 (defun proced-settings ()
   (proced-toggle-auto-update t))
 
+;; dirtree
+(require 'dirtree)
 
 
 
@@ -280,6 +283,7 @@
 
 (global-set-key [f1] 'ansi-term)
 (global-set-key [f2] 'rgrep)
+(global-set-key [f3] 'dirtree)
 (global-set-key (kbd "C-c r") 'replace-string)
 (global-set-key (kbd "M-o") 'other-window)
 (add-hook 'proced-mode-hook 'proced-settings)
